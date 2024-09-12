@@ -1,0 +1,153 @@
+<div class="main">
+    <div class="container">
+        <div class="search"></div>
+        <div class="info_container">
+            <div class="tabs">
+                <div class="tab" id="tour" (click)="activateTab('tour')" [class.activeTab]="activeTab === 'tour'">Tour</div>
+                <div class="tab" id="description" (click)="activateTab('description')" [class.activeTab]="activeTab === 'description'">Description</div>
+                <div class="tab" id="photos" (click)="activateTab('photos')" [class.activeTab]="activeTab === 'photos'">Photos</div>
+            </div>
+            <div class="info">
+                <div class="general">
+                    <img [src]="'assets/data/tour_previews/' + tour.img" alt="hotel_image">
+                    <div class="text">
+                        <div class="title">{{tour.name}}</div>
+                        <div class="location">
+                            <img src="../../assets/ui/icons/marker.png">
+                            <span>{{city.name}}, </span><span>{{country.name}}</span>
+                        </div>
+                        <div class="desc">{{tour.description}}</div>    
+                    </div>
+                </div>
+                <div class="tab-elem tour" [class.active]="activeTab === 'tour'">
+                    <div class="content">
+                        <div class="tourists">
+                            <div class="title">
+                                <img src="../../assets/ui/icons/people.png"/>
+                                <span>Tourists</span>
+                            </div>
+                            <div class="info">
+                                <span>{{tour.count_persons}} adults</span>
+                            </div>
+                        </div>
+                        <div class="schedule">
+                            <div class="title">
+                                <img src="../../assets/ui/icons/icons8-calendar-96.png"/>
+                                <span>Schedule</span>
+                            </div>
+                            <div class="info">
+                                <span class="text">{{tour.time_from}}</span> <span> - </span> <span class="text">{{tour.time_to}}</span>
+                            </div>
+                        </div>
+                        <div class="hotel">
+                            <div class="title">
+                                <img src="../../assets/ui/icons/icons8-hotel-96.png"/>
+                                <span>Hotel</span>
+                            </div>
+                            <div class="info">
+                                <div class="room">
+                                    <span class="category">Room: </span>
+                                    <span class="text">{{hotel.room_desc}}</span>
+                                </div>
+                                <div class="eating">
+                                    <span class="category">Meal: </span>
+                                    <span class="text">{{hotel.meal_desc}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="features">
+                            <div class="title">
+                                <img src="../../assets/ui/icons/icons8-service-96.png"/>
+                                <span>Features</span>
+                            </div>
+                            <div class="info">
+                                <div class="feature" *ngFor="let key of getFeatureKeys(tour.features)">
+                                    <img [src]="getFeatureImage(key)" alt="" />
+                                    <span class="feature_text">{{ key }}</span>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-elem" [class.active]="activeTab === 'description'">
+                    <div class="description">
+                        <div class="left">
+                            <div class="located">
+                                <h4>Location</h4>
+                                <span>{{hotel.location_desc}}</span>
+                            </div>
+                            <div class="beach">
+                                <h4>Beach</h4>
+                                <span>{{hotel.beach_desc}}</span>
+                            </div>
+                            <div class="adress">
+                                <h4>Adress</h4>
+                                <span>{{hotel.address}}</span>
+                            </div>
+                            <div class="phone">
+                                <h4>Phone</h4>
+                                <span>{{hotel.phone}}</span>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="email">
+                                <h4>Email</h4>
+                                <span>{{hotel.email}}</span>
+                            </div>
+                            <div class="site">
+                                <h4>Hotel site</h4>
+                                <a href="www.google.com">{{hotel.name}}</a>
+                            </div>
+                            <div class="benefits">
+                                <h4>Hotel features</h4>
+                                <ul>
+                                    <li *ngFor="let item of hotel.features"> <span>{{item}}</span> </li>
+                                </ul>
+                            </div>
+                            <div class="room">
+                                <h4>Rooms</h4>
+                                <span>{{hotel.rooms_desc}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-elem " [class.active]="activeTab === 'photos'">
+                    <div class="photos">
+                        <div *ngIf="tour.hotel_images.length === 0" class="no_photos">
+                            <span>Sadly, but there are no photos for this tour</span>
+                        </div>
+                        <div class="photo" *ngFor="let photo of tour.hotel_images">
+                            <img [src]="'assets/data/hotel_images/' + photo" alt="room"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <app-modal-order #modal [tourId]="tour.id"></app-modal-order>
+            <div class="btn_buy" id="btn_buy" type="submit">
+                <div>
+                    Go to order
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // document.getElementById("btn_buy").addEventListener("click", sendRequest("GET", "https://127.0.0.1:8000/api/tours"));
+    function sendRequest(method, url, body = null) {
+        return new Promise((resolve, reject) => {
+            const request = new XMLHttpRequest();
+            request.open(method, url, true);
+            request.setRequestHeader('Content-type', 'application/json');
+            request.onload = function () {
+                const data = JSON.parse(this.response);
+                alert(data);
+                request.send();
+            }
+            reqquest.onerror = function () {
+                reject(request.response); 
+                request.send();
+            }
+        })
+    }
+</script>

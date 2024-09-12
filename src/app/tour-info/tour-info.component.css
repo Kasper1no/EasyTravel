@@ -1,0 +1,275 @@
+.main{
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    position: relative;
+    width: 80%;
+}
+
+.tabs{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    gap:10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid gray;
+}
+
+.tabs div{
+    padding:5px 15px;
+    cursor: pointer;
+}
+
+.activeTab{
+    border-bottom: 2px solid #4691F2;
+    color: #4691F2;
+    font-weight: bold;
+}
+
+.info_container{
+    position: relative;
+}
+
+.info_container >.info{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.general{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+
+.general img{
+    width: 200px;
+    height: 150px;
+    border-radius: 15px;
+}
+
+.general .text{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.text .title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.location{
+    display: flex;
+    gap:5px;
+    color:#4691F2;
+    font-weight: bold;
+}
+
+.location img{
+    width: 20px;
+    height: 20px;
+}
+
+.text .desc{
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+.tab-elem{
+    display: none;
+    margin-top: 15px;
+    flex-direction: column;
+    background-color: #c6c6c6;
+    border-radius: 10px;
+}
+
+.tab-elem .content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.tab-elem .content >div{
+    position: relative;
+}
+
+.tab-elem .content >*{
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+}
+
+.tab-elem .title{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    background-color: #cfcfcf;
+    border-radius: 8px 0 0 8px;
+    padding: 5px;
+}
+
+.tab-elem .title img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.tab-elem .info{
+    display: flex;
+    background-color: #f9f9f9;
+    min-height: 50px;
+    height: fit-content;
+    border-radius: 0 8px 8px 0;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.hotel .info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 2px
+}
+
+.hotel .info .category{
+    color:#4691F2;
+    font-weight: 500;
+}
+
+.hotel .info .text{
+    font-size: 14px;
+}
+
+.features .info{
+    display: flex;
+    gap:15px;
+}
+
+.features .info img{
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+}
+
+.active{
+    display: grid;
+}
+
+.btn_buy{
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    bottom: 5px;
+}
+
+.btn_buy >div{
+    display: flex;
+    width: 250px;
+    height: 50px;
+    background-color: #4691F2;
+    color: #f9f9f9;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+.btn_buy >div:active{
+    transform: scale(0.95);
+    transition: transform 0.2s ease-in-out;
+}
+
+.description{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: fit-content;
+    padding: 10px;
+}
+
+.description >div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.description >div >div{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.description >div >div >*{
+    margin: 0;
+}
+
+.description >div >div >h4{
+    font-weight: bold;
+    font-size: 18px;
+    color: #4691F2;
+}
+
+.description >div >div >span, .description >div >div >ul >li, .description >div >div >a{
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.description >div >div >ul >li{
+    color:#4691F2;
+}
+
+.description >div >div >ul >li >span{
+    color:#050505;
+}
+
+.photos{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+}
+
+.photo{
+    display: flex;
+    position: relative;
+    width: 95%;
+    padding: 10px;
+}
+
+.photo img{
+    width: 100%;
+    object-fit:cover;
+    max-height: 500px;
+}
+
+.no_photos{
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.schedule .info span{
+    margin: 0 5px;
+}
+
+.content .schedule .info >.text{
+    font-weight: 500;
+    color:#4691F2;
+    margin:0;
+}

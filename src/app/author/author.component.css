@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.text h2 {
+    margin-top: 0;
+}
+
+.technologies {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.technologies li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.technologies .tech-logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.qr-code {
+    flex: 0 0 200px;
+    text-align: center;
+}
+
+.qr-code img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

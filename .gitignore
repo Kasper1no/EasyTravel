@@ -1,0 +1,33 @@
+# Node artifacts
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Compiled output
+/dist/
+.tmp/
+
+# Logs
+logs/
+*.log
+
+# Dependency directories
+/jspm_packages/
+/bower_components/
+
+# Typescript cache
+*.tsbuildinfo
+
+# IDEs
+.idea/
+.vscode/
+
+# Environment
+.env
+.env.prod
+.env.stage
+
+# Caches
+.cache/
+*.cache
+.angular/cache/

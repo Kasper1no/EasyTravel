@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="image">
+        <img [src]="'assets/ui/images/' + blog.image1" alt="blog_image">
+    </div>
+    <div class="info">
+        <div class="hotel_info">
+            <h3>{{blog.title}}</h3>
+            <span>{{blog.description}}</span>
+            <div class="btn_container">
+                <a class="link" routerLink="/blog/{{blog.id}}" routerLinkActive="active" target="_blank"> <span>Read more</span></a>
+            </div>
+        </div>
+    </div>
+</div>

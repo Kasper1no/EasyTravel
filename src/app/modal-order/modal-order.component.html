@@ -1,0 +1,16 @@
+<div class="modal" *ngIf="isOpen">
+    <div class="modal-content">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <form #form="ngForm" (ngSubmit)="makeOrder(form.value)" *ngIf="!success">
+        <div>
+          <input type="email" name="email" id="email" placeholder="Enter your email" ngModel>
+        </div>
+        <span *ngIf="validationAlarm">Order already exists for this tour with this email<br/>You really want to order this tour?</span>
+        <div>
+          <input class="btn" type="submit" value="Send order request">
+        </div>
+      </form>
+
+      <div class="success" *ngIf="success">We will contact you by email as soon as your order will be ready!<br>Thank you for choosing us!</div>
+    </div>
+  </div>

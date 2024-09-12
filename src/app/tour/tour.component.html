@@ -1,0 +1,68 @@
+<div class="main">
+    <div class="content">
+        <div class="welcome">
+            <div class="text">
+                <div class="motivation">Relax & Enjoy</div>
+                <div class="title">Choose <span>Easy</span>Travel to get a perfect holiday!</div>
+                <span class="desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam saepe eos aperiam ut, illum architecto similique cumque nam repellat modi magni recusandae, commodi optio qui debitis voluptatum ipsum perspiciatis quaerat</span>
+                <a class="link" routerLink="/search" routerLinkActive="active"><div class="btn_tours">Browse tours <img src="../../assets/ui/icons/icons8-search-96.png" alt="search"/></div></a>
+            </div>
+            <div class="images">
+                <img src="../../assets/ui/images/Travel-the-world-and-work.jpg" alt="travel">
+                <img src="../../assets/ui/images/travel_people.png" alt="people">
+                <img src="../../assets/ui/images/view.jpg" alt="view">
+            </div>
+        </div>
+        <h2>Hottest tours</h2>
+        <div class="container">
+                <app-tour-card [tourId] = "1"></app-tour-card>
+                <app-tour-card [tourId] = "2"></app-tour-card>
+                <app-tour-card [tourId] = "3"></app-tour-card>
+        </div>
+        <h2>Reviews</h2>
+        <div class="reviews">
+            <div class="inner">
+                <div class="reviewers">
+                    <div>
+                        <div class="photo first" (click)="click(1)" [class.clicked]="clickedId === 1" [class.unclicked]="clickedId !== 1">
+                            <img  src="../../assets/ui/images/reviewer6.jpg" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="photo second" (click)="click(2)" [class.clicked]="clickedId === 2" [class.unclicked]="clickedId !== 2">
+                            <img  src="../../assets/ui/images/reviewer4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="photo third" (click)="click(3)" [class.clicked]="clickedId === 3" [class.unclicked]="clickedId !== 3">
+                            <img src="../../assets/ui/images/reviewer5.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="feedback" [class.current]="clickedId === 1">
+                        <h4>Jake Miller</h4>
+                        <p>Cool Guy</p>
+                        <p>An exceptional travel agency! Their attention to detail and personalized service made our trip truly memorable. Highly recommended!</p>
+                    </div>
+                    <div class="feedback text2" [class.current]="clickedId === 2">
+                        <h4>Mike Jonson</h4>
+                        <p>Dentist</p>
+                        <p>Outstanding experience from start to finish! The team at this travel agency took care of everything, allowing us to relax and enjoy every moment of our vacation.</p>
+                    </div>
+                    <div class="feedback text3" [class.current]="clickedId === 3">
+                        <h4>Kate Williams</h4>
+                        <p>Architect</p>
+                        <p>Professional and knowledgeable staff who went above and beyond to tailor our trip to perfection. Couldn't have asked for a better travel agency to plan our getaway!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Newest posts</h2>
+        <div class="container">
+                <app-blog-card [blogId] = "1"></app-blog-card>
+                <app-blog-card [blogId] = "2"></app-blog-card>
+                <app-blog-card [blogId] = "3"></app-blog-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,152 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-evenly;
+    width: 225px;
+    height: 290px;
+    border-radius: 10px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover{
+    background-color: #1071ee;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.btn:active{
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.image img{
+    height: 140px;
+    width: 95%;
+    object-fit:cover;
+    padding: 0 5px 5px 5px;
+    border-radius: 10px;
+}
+
+.image img:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 0px 5px 5px;
+    font-weight: 700;
+}
+
+.hotel_info{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.hotel_info >span{
+    font-size: 8px;
+}
+
+/* .hotel_info >div{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+} */
+
+.info .hotel_info h3{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.markers img{
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+
+.markers{
+    display: flex;
+    justify-content: space-around;
+}
+
+.markers div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.markers span{
+    font-size: 10px;
+    text-wrap: break-word;
+    text-align: center;
+}
+
+.btn_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.price{
+    width: fit-content;
+    display: flex;
+    align-items: flex-end;
+}
+
+.price span:nth-child(1){
+    font-size: 20px;
+}
+
+.price span:nth-child(2){
+    font-size: 10px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background-color:#4691F2;
+    padding: 10px;
+}
+
+.btn_unavailable{
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+    background-color: #6d7277;
+    cursor:not-allowed;
+}
+
+.disabled{
+    pointer-events: none;
+}
+
+.btn img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.btn_unavailable img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.not_ready{display: none;}

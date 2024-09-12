@@ -1,0 +1,32 @@
+<div class="container" [class.not_ready]="tour == null">
+    <div class="image">
+        <img [src]="'assets/data/tour_previews/' + tour.img" alt="hotel_image">
+    </div>
+    <div class="info">
+        <div class="hotel_info">
+            <h3>{{tour.name}}</h3>
+            <span>{{tour.description}}</span>
+            <div class="markers">
+                <div class="location">
+                    <img src="../../assets/ui/icons/icons8-location-96.png">
+                    <span>{{city.name}}, </span><span>{{country.name}}</span>
+                </div>
+                <div class="eat">
+                    <img src="../../assets/ui/icons/icons8-meal-96.png">
+                    <span>{{hotel.meal_desc}}</span>
+                </div>
+            </div>
+            <div class="btn_container">
+                <div class="price">
+                    <span>{{tour.price}}$</span>
+                    <span>for 1 person</span>
+                </div>
+                <a routerLink="/tour-info/{{tour.id}}" routerLinkActive="active" target="_blank" [class.disabled]="hotel.free_count == 0">
+                    <div [class.btn]="hotel.free_count > 0" [class.btn_unavailable]="hotel.free_count == 0">
+                        <img src="../../assets/ui/icons/arrow.png" alt="tour">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

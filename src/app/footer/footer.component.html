@@ -1,0 +1,42 @@
+<footer class="footer">
+        <div class="container">
+            <span>Contact us</span>
+            <hr class="line">
+            <ul>
+                <li><a href="#" (click)="copyPhoneNumber($event)">+380 (99) 999-99-99 <span class="copy-notification">Copied!</span></a></li>
+                <li><a href="#" (click)="copyPhoneNumber($event)">+380 (67) 999-99-99 <span class="copy-notification">Copied!</span></a></li>
+            </ul>  
+        </div>
+        <div class="container">
+            <span>Travels</span>
+            <hr class="line">
+            <ul>
+              <li><a routerLink="/search" [queryParams]="{ category: 'Greece' }">Greece</a></li>
+              <li><a routerLink="/search" [queryParams]="{ category: 'Italy' }">Italy</a></li>
+              <li><a routerLink="/search" [queryParams]="{ category: 'France' }">France</a></li>
+              <li><a routerLink="/search" [queryParams]="{ category: 'Spain' }">Spain</a></li>
+              <li><a routerLink="/search" [queryParams]="{ category: 'UK' }">UK</a></li>
+            </ul>
+          </div>
+        <div class="container">
+            <span>Follow us</span>
+            <hr class="line">
+            <ul class="icons">
+                <li>
+                    <a class="icon">
+                        <img src="../../assets/ui/icons/telegram.svg" alt="tg">
+                    </a>
+                </li>
+                <li>
+                    <a class="icon">
+                        <img src="../../assets/ui/icons/viber.svg" alt="viber">
+                    </a>
+                </li>
+                <li>
+                    <a class="icon">
+                        <img src="../../assets/ui/icons/instagram.svg" alt="inst">
+                    </a>
+                </li>
+            </ul>
+        </div>
+</footer>

@@ -1,0 +1,88 @@
+.footer{
+  display: flex;
+  justify-content: center;
+  padding:20px;
+  background-color: #373b3d; 
+  gap:40px;
+  position: sticky;
+  bottom: 0px;
+}
+
+.container span{  
+  font-size: 20px;
+  color: #03569F;
+}
+
+.line{
+  width: 100%;
+  background-color: #e9dfdf;
+}
+
+.container{
+  display: flex;
+  padding:24px;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.container ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container li{
+  position: relative;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;  
+}
+
+.container a{
+  text-decoration: none;
+  color: #0f0f0f;
+}
+
+.container a:hover{
+  text-decoration: underline;
+}
+
+.icons{
+  gap:5%;
+  display: flex;
+}
+
+.icon{
+  position: relative;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon img{
+  width: 90%;
+  height: 90%;
+}
+
+.copy-notification {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  top: -5px;
+  right: -100px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.copy-notification.show {
+  display: inline-block;
+  opacity: 1;
+}

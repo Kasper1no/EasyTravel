@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+
+.main{
+    background-color: #f9f9f9;
+    margin: 0;
+    position: relative;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.welcome{
+    display: flex;
+    width: 85%;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    background-image: url("../../assets/ui/images/back.png");
+    background-size:cover;
+    height: 500px;  
+    
+}
+
+.text{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    gap:10px;
+}
+
+.motivation{
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 24px;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 32px;
+}
+.title span{
+    color: #4691F2;
+}
+
+.desc{
+    font-size: 13px;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.link :hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.link :active{
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn_tours{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 10px;
+    height: 25px;
+    width:fit-content;
+    border-radius: 14.5px;
+    padding: 10px;
+    background-color: #4691F2;
+    color:#f9f9f9;
+}
+
+.btn_tours img{
+    object-fit: cover;
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+}
+
+.images{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    justify-items: center;
+    grid-auto-flow: row dense;
+    position: relative;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center
+}
+
+.images img{
+    position: relative;
+    border-radius: 5px;
+    max-width: 175px;
+    max-height: 200px;
+    object-fit:fill;
+}
+
+.images img:nth-child(2){
+    bottom: -50px;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    grid-auto-flow: dense;
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+.container a{
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+}
+
+.container a:focus, a:hover, a:active {
+    outline: none;
+}
+
+.reviews{
+    height: 400px;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    
+    background: url(../..//assets/ui/images/review_back.png) no-repeat;
+}
+
+.inner{
+    display: flex;
+    width: 85%;
+    flex-direction: row;
+    position: relative;
+}
+
+.reviewers{
+    display: grid;
+    align-items: flex-end;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 60%;
+    height: 80%;
+}
+
+.reviewers >div{
+    display: flex;
+    justify-content: center;
+}
+
+.review {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    padding-left: 20px;
+}
+
+.feedback{
+    display: none;
+}
+
+.photo{
+    display: flex;
+    position: relative;
+    width: fit-content;
+    justify-content: center;
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.photo >img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 10px;
+}
+
+.photo:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.clicked{
+    transition: 0.3s ease-in-out;
+    height: 300px;
+    width: 250px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.unclicked{
+    transition:transform 0.1s ease-in-out;
+    height: 160px;
+    width: 110px;
+}
+
+.current{
+    display: block;
+}
+
+/* .first{
+    transform-origin: bottom left;
+}
+
+.second{
+    transform-origin: bottom;
+}
+
+.third{
+    transform-origin: bottom right;
+} */
+

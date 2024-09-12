@@ -1,0 +1,81 @@
+<div class="main">
+    <h2>Search</h2>
+    <div class="search_menu">
+        <div class="search_bar">
+            <div class="country">
+                <select class="country" [(ngModel)]="selected_country_id" (change)="choose_country($event)">
+                    <option value="0">All</option>
+                    <option *ngFor="let country of available_countries" [value]="country.id">{{ country.name }}</option>
+                </select>
+            </div>
+            <div class="city">
+                <select class="city" [(ngModel)]="selected_city_id" (change)="choose_city($event)">
+                    <option value="0">All</option>
+                    <option *ngFor="let city of available_cities" [value]="city.id">{{ city.name }}</option>
+                </select>
+            </div>
+            <div class="hotel">
+                <select class="hotel" [(ngModel)]="selected_hotel_id" (change)="choose_hotel($event)">
+                    <option value="0">All</option>
+                    <option *ngFor="let hotel of available_hotels" [disabled]="! (hotel.free_count > 0)" [value]="hotel.id">{{ hotel.name }}</option>
+                </select>
+            </div>
+            <div class="date" (change)="choose_date($event)">
+                <select class="date">
+                    <option value="0">All</option>
+                    <option value="1"> 7 days or less</option>
+                    <option value="2"> 7 - 14 days</option>
+                    <option value="3"> 14 - 21 days</option>
+                    <option value="4"> 21 day or more</option>
+                </select>
+            </div> 
+        </div>
+
+        <div class="btn_more" (click)="additional_menu = !additional_menu">
+            <div class="open" [class.option]="!additional_menu">More options</div>
+            <div class="close" [class.option]="additional_menu"><img src="../../assets/ui/icons/blue_cross.png" alt="button"/></div>
+        </div>
+        <div class="search_options" *ngIf="additional_menu">
+            <div class="trasport">
+                <h4>Transport</h4>
+                <div class="inputs">
+                    <label>Bus</label>
+                    <input type="radio" name="transfer" value="Bus" (change)="choose_transfer($event)"/>
+                    <label>Train</label>
+                    <input type="radio" name="transfer" value="Train" (change)="choose_transfer($event)"/>
+                    <label>Flight</label>
+                    <input type="radio" name="transfer" value="Flight" (change)="choose_transfer($event)"/>
+                </div>
+            </div>
+            <div class="price">
+                <h4>Price</h4>
+                <div class="slider">
+                    <label class="label-min-value">{{current_min_price}}$</label>
+                    <div class="rangeslider">
+                        <input class="min input-ranges" name="min" type="range" min="{{get_min_price()}}" max="{{get_max_price()}}" step="10" value="{{current_min_price}}" (change)="slider_min_price($event)">
+                        <input class="max input-ranges" name="max" type="range" min="{{get_min_price()}}" max="{{get_max_price()}}" step="10" value="{{current_max_price}}" (change)="slider_max_price($event)">
+                    </div>
+                    <label class="label-max-value">{{current_max_price}}$</label>
+                </div>
+               
+            </div>
+            <div class="meal">
+                <h4>Meal</h4>
+                <div class="inputs">
+                    <label>Only Breakfast</label>
+                    <input type="radio" name="meal" value="Only Breakfast" (change)="choose_meal($event)"/>
+                    <label>Only Dinner</label>
+                    <input type="radio" name="meal" value="Only Dinner" (change)="choose_meal($event)"/>
+                    <label>All Inclusive</label>
+                    <input type="radio" name="meal" value="All Inclusive" (change)="choose_meal($event)"/>
+                </div>
+            </div>
+        </div>
+        <div class="btn_clear" *ngIf="additional_menu" (click)="clear()">Clear additional options</div>
+    </div>
+    
+    <div class="results">
+        <app-tour-card *ngFor="let tour of filtered_tours" [tourId]="tour.id"></app-tour-card>
+        <div class="no_results" *ngIf="filtered_tours.length == 0">No results</div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+h2{
+    text-align: center;
+}
+
+.content{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.blogs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px
+}

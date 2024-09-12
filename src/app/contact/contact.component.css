@@ -1,0 +1,148 @@
+*{
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+}
+
+.content{
+    display: flex;
+    position:relative;
+    width: 95%;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+h3{
+    font-size: 24px;
+    margin: 0;
+    color:#4691f2;
+    padding-left: 10px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 25px 25px 25px;
+    gap:10px;
+    margin-top: 10px;
+}
+
+.form_content{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1f1f1;
+    width: 40%;
+    min-width: fit-content;
+    max-width: fit-content;
+    border-radius: 10px;
+    box-shadow: 0 8px 12px 2px rgba(0, 0, 0, 0.14), 0 3px 15px 5px rgba(0, 0, 0, 0.12), 0 4px 5px -5px rgba(0, 0, 0, 0.2);
+
+}
+
+.form_content >p{
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    background-color: #4691f2;
+    margin: 0;
+    padding: 10px 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.form label{
+    color:#4691f2;
+    font-weight: bold;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+
+form >div >input,form #comment{
+    min-width: 300px;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#comment{
+    height: 50px;
+    min-height: 25px;
+    max-height: 150px;
+}
+
+.btn{
+    width: 100%;
+    height: 40px;
+    background-color: #4691f2;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:20px;
+    position: relative;
+    height: 150px;
+    margin-bottom: 30px;
+}
+
+.contact_card{
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 10px;
+    height: 90%;
+    max-width: 25%;
+    gap: 10px;
+    box-shadow: 0 8px 12px 2px rgba(0, 0, 0, 0.14), 0 3px 15px 5px rgba(0, 0, 0, 0.12), 0 4px 5px -5px rgba(0, 0, 0, 0.2);
+
+}
+
+.contact_card img{
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.head{
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.contact_card .text{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.contact_card .text >*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    word-wrap: break-word;
+}

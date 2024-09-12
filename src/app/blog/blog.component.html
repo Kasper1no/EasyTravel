@@ -1,0 +1,11 @@
+<h2>{{blog.title}}</h2>
+<div class="content">
+    <div class="image">
+        <img [src]="'assets/ui/images/' + blog.image1" alt="blog_image">
+    </div>
+    <div class="text">{{blog.text1}}</div>
+    <div class="image" *ngIf="blog.image2 !== ''">
+        <img [src]="'assets/ui/images/' + blog.image2">
+    </div>
+    <div class="text">{{blog.text2}}</div>
+</div>

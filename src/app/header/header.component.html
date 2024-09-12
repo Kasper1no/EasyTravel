@@ -1,0 +1,32 @@
+<div class="menu">
+    <a class="logo" href="/tour">
+        <img alt="logo" src="../../assets/ui/icons/icons8-tour-96.png">
+        <span class="logo_name">Easy</span>
+        <span class="black_name"> Travel</span>
+    </a>
+    <nav>
+        <ul class="links">
+            <li (click)="activeTab = 'tour'">
+                <a class="a" routerLink="/tour" routerLinkActive="active" [class.active_text]="activeTab === 'tour'">Main</a>
+                <div class="point"  [class.active_point]="activeTab === 'tour'"></div>
+            </li>
+            <li (click)="activeTab = 'search'">
+                <a class="a" routerLink="/search" routerLinkActive="active" [class.active_text]="activeTab === 'search'">Tours</a>
+                <div class="point"  [class.active_point]="activeTab === 'search'"></div>
+            </li>
+            <li (click)="activeTab = 'blogs'">
+                <a class="a" routerLink="/blogs" routerLinkActive="active" [class.active_text]="activeTab === 'blogs'">Blogs</a>
+                <div class="point"  [class.active_point]="activeTab === 'blogs'"></div>
+            </li>
+            <li (click)="activeTab = 'contact'">
+                <a class="a" routerLink="/contact" routerLinkActive="active" [class.active_text]="activeTab === 'contact'">Contact</a>
+                <div class="point"  [class.active_point]="activeTab === 'contact'"></div>
+            </li>
+            <li (click)="activeTab = 'about'">
+                <a class="a" routerLink="/about" routerLinkActive="active" [class.active_text]="activeTab === 'about'">About us</a>
+                <div class="point"  [class.active_point]="activeTab === 'about'"></div>
+            </li>
+        </ul>
+    </nav>
+</div>
+

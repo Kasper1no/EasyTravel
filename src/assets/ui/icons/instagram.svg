@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <linearGradient id="prefix__a" x1="9.154%" x2="90.846%" y1="90.847%" y2="9.153%">
+            <stop offset="0%" stop-color="#FFC107"/>
+            <stop offset="50.7%" stop-color="#F44336"/>
+            <stop offset="99%" stop-color="#9C27B0"/>
+        </linearGradient>
+        <linearGradient id="prefix__b" x1="14.646%" x2="85.354%" y1="85.354%" y2="14.646%">
+            <stop offset="0%" stop-color="#FFC107"/>
+            <stop offset="50.7%" stop-color="#F44336"/>
+            <stop offset="99%" stop-color="#9C27B0"/>
+        </linearGradient>
+        <linearGradient id="prefix__c" x1="14.648%" x2="85.352%" y1="85.361%" y2="14.648%">
+            <stop offset="0%" stop-color="#FFC107"/>
+            <stop offset="50.7%" stop-color="#F44336"/>
+            <stop offset="99%" stop-color="#9C27B0"/>
+        </linearGradient>
+    </defs>
+    <g fill="none">
+        <path fill="url(#prefix__a)" d="M16.5 0h-9C3.358 0 0 3.358 0 7.5v9C0 20.642 3.358 24 7.5 24h9c4.142 0 7.5-3.358 7.5-7.5v-9C24 3.358 20.642 0 16.5 0zm5.25 16.5c0 2.895-2.355 5.25-5.25 5.25h-9c-2.895 0-5.25-2.355-5.25-5.25v-9c0-2.895 2.355-5.25 5.25-5.25h9c2.895 0 5.25 2.355 5.25 5.25v9z"/>
+        <path fill="url(#prefix__b)" d="M12 6c-3.313 0-6 2.687-6 6s2.687 6 6 6 6-2.687 6-6-2.687-6-6-6zm0 9.75c-2.067 0-3.75-1.683-3.75-3.75 0-2.069 1.683-3.75 3.75-3.75s3.75 1.681 3.75 3.75c0 2.067-1.683 3.75-3.75 3.75z"/>
+        <circle cx="18.45" cy="5.55" r="1" fill="url(#prefix__c)"/>
+    </g>
+</svg>
